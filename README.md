@@ -15,7 +15,7 @@ dig -p55 @127.0.0.1 google.de
 
 ## Custom records
 
-Just mount `/etc/unbound/records.conf` with your own record config looking somewhat like this
+Just mount(create) `/etc/unbound/conf.d/01_records.conf` with your own record config looking somewhat like this
 
 ```
 local-data: "gateway.myself.com. A 192.168.1.1"
@@ -27,6 +27,19 @@ local-data: "www.nas.myself.com. A 192.168.1.2"
 local-data: "homeautomation.myself.com. A 192.168.1.6"
 local-data: "www.homeautomation.myself.com. A 192.168.1.2"
 ```
+
+## Custom configuration
+Mount any configuration under `/etc/unbound/conf.d/my-custom.conf`, for example to forward all request to public dns
+
+`/etc/unbound/conf.d/02_forward.conf`
+```
+forward-zone:
+    name: "."
+        forward-addr: 1.1.1.1        # Cloudflare
+        forward-addr: 1.0.0.1        # Cloudflare
+        forward-addr: 8.8.4.4        # Google
+        forward-addr: 8.8.8.8        # Google
+``` 
 
 ## Build
 
