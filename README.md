@@ -2,14 +2,10 @@
 
 Unbound DNS resolve / cache / validate [unbound.net](https://unbound.net/)
 
-**for amd64 its**
-Unbound Version: 1.8.1
-OpenSSL Version: 1.1.1
+**for amd64 its** Unbound  1.8.1,  1.1.1
+**for arm32/64 its** Unbound 1.7.3, OpenSSL 1.0.2p
 
-**for arm32/64 its**
-Unbound Version: 1.7.3
-OpenSSL Version: 1.0.2p
-(alpine:edge is yet outdated for arm on docker, waiting for it to get repushed)
+(amd32v6|amd64v8/alpine:edge is yet outdated for arm arch on hub.docker, waiting for it to get repushed)
 
 ## Start
 
@@ -46,10 +42,10 @@ Mount any configuration under `/etc/unbound/conf.d/my-custom.conf`, for example 
 ```
 forward-zone:
     name: "."
-        forward-addr: 1.1.1.1        # Cloudflare
-        forward-addr: 1.0.0.1        # Cloudflare
-        forward-addr: 8.8.4.4        # Google
-        forward-addr: 8.8.8.8        # Google
+    forward-addr: 1.1.1.1        # Cloudflare
+    forward-addr: 1.0.0.1        # Cloudflare
+    forward-addr: 8.8.4.4        # Google
+    forward-addr: 8.8.8.8        # Google
 ``` 
 
 ## Build
