@@ -1,7 +1,8 @@
 generate-dockerfiles:
 	env DK_FROM_IMAGE='alpine:edge' gomplate -f Dockerfile.tpl -o Dockerfile_amd64
-	env DK_FROM_IMAGE='arm32v6/alpine:edge' gomplate -f Dockerfile.tpl -o Dockerfile_arm32v6
-	env DK_FROM_IMAGE='arm64v8/alpine:edge' gomplate -f Dockerfile.tpl -o Dockerfile_arm64v8
+	# attention, in armXX namespace the tag edge is outdate ..
+	env DK_FROM_IMAGE='arm32v6/alpine:latest' gomplate -f Dockerfile.tpl -o Dockerfile_arm32v6
+	env DK_FROM_IMAGE='arm64v8/alpine:latest' gomplate -f Dockerfile.tpl -o Dockerfile_arm64v8
 
 build: generate-dockerfiles
 	docker build -t eugenmayer/unbound:1.8 . -f Dockerfile_amd64
@@ -12,7 +13,7 @@ build: generate-dockerfiles
 
 pull:
 	docker pull alpine:edge
-	docker pull arm32v7/alpine:edge
+	docker pull arm32v6/alpine:edge
 	docker pull arm64v8/alpine:edge
 
 push:

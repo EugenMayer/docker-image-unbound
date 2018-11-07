@@ -2,7 +2,11 @@
 
 Unbound DNS resolve / cache / validate [unbound.net](https://unbound.net/)
 
-## start
+Unbound Version: 1.8.1
+OpenSSL Version: 1.1.1
+
+See 
+## Start
 
 Run this container with the following command:
 
@@ -12,6 +16,8 @@ docker-compose up
 dig -p55 @127.0.0.1 gateway.myself.com
 dig -p55 @127.0.0.1 google.de
 ```
+
+For more examples also see 
 
 ## Custom records
 
