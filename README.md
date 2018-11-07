@@ -10,6 +10,7 @@ Run this container with the following command:
 docker-compose up
 # replace 127.0.0.1 with your docker-machine ip
 dig -p55 @127.0.0.1 gateway.myself.com
+dig -p55 @127.0.0.1 google.de
 ```
 
 ## Custom records

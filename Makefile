@@ -5,10 +5,10 @@ generate-dockerfiles:
 
 build: generate-dockerfiles
 	docker build -t eugenmayer/unbound:1.8 . -f Dockerfile_amd64
-	docker tag eugenmayer/unbound:1.8 eugenmayer/unbound:latest
-	docker build -t eugenmayer/unbound:1.8-arm32v6 . -f Dockerfile_arm32v6
-	docker tag eugenmayer/unbound:1.8-arm32v6 eugenmayer/unbound:1.8-arm32v7
-	docker build -t eugenmayer/unbound:1.8-arm64v8 . -f Dockerfile_arm64v8
+#	docker tag eugenmayer/unbound:1.8 eugenmayer/unbound:latest
+#	docker build -t eugenmayer/unbound:1.8-arm32v6 . -f Dockerfile_arm32v6
+#	docker tag eugenmayer/unbound:1.8-arm32v6 eugenmayer/unbound:1.8-arm32v7
+#	docker build -t eugenmayer/unbound:1.8-arm64v8 . -f Dockerfile_arm64v8
 
 pull:
 	docker pull alpine:edge
