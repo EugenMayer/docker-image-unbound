@@ -2,10 +2,15 @@
 
 Unbound DNS resolve / cache / validate [unbound.net](https://unbound.net/)
 
+**for amd64 its**
 Unbound Version: 1.8.1
 OpenSSL Version: 1.1.1
 
-See 
+**for arm32/64 its**
+Unbound Version: 1.7.3
+OpenSSL Version: 1.0.2p
+(alpine:edge is yet outdated for arm on docker, waiting for it to get repushed)
+
 ## Start
 
 Run this container with the following command:
