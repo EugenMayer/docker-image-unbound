@@ -2,10 +2,7 @@
 
 Unbound DNS resolve / cache / validate [unbound.net](https://unbound.net/)
 
-**for amd64 its** Unbound  1.8.1,  1.1.1
-**for arm32/64 its** Unbound 1.7.3, OpenSSL 1.0.2p
-
-(amd32v6|amd64v8/alpine:edge is yet outdated for arm arch on hub.docker, waiting for it to get repushed)
+Offers Unbound  1.17 through `ghcr.io/eugenmayer/unbound`
 
 ## Start
 
