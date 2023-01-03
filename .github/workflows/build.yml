@@ -2,8 +2,6 @@ name: build-and-push
 
 on:
   push:
-    tags:
-      - '*'
 
 env:
   IMAGE_FQDN: ghcr.io/eugenmayer/unbound
