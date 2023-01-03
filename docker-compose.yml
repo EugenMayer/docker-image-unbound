@@ -2,7 +2,7 @@ version: "3"
 
 services:
   unbound:
-    image: ghcr.io/eugenmayer/unbound:1.17
+    image: ghcr.io/eugenmayer/unbound:1.17-1
     volumes:
     - ./test/01_records.conf:/etc/unbound/conf.d/01_records.conf
     - ./test/02_forward.conf:/etc/unbound/conf.d/02_forward.conf
