@@ -1,8 +1,9 @@
-version: "2"
+version: "3"
 
 services:
   unbound:
-    image: eugenmayer/unbound:1.8
+    #image: eugenmayer/unbound:1.17
+    image: mvance/unbound:1.17.0
     volumes:
     - ./test/01_records.conf:/etc/unbound/conf.d/01_records.conf
     - ./test/02_forward.conf:/etc/unbound/conf.d/02_forward.conf

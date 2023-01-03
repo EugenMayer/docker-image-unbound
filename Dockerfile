@@ -1,4 +1,4 @@
-FROM {{.Env.DK_FROM_IMAGE}}
+FROM alpine:3.17
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
