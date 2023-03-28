@@ -2,6 +2,9 @@
 
 Running your own unbound on an alpine box
 
+
+## Installation
+
 Install unbound dns
 ```bash
 apk update
@@ -13,6 +16,7 @@ mv /etc/unbound/unbound.conf /etc/unbound/unbound.conf.old
 vim /etc/unbound/unbound.conf
 ```
 
+### Server config
 put this inside
 
 ``` 
@@ -65,7 +69,10 @@ Now our specific ocnfig
 mkdir -p /etc/unbound/unbound.conf.d/
 ```
 
+
+### Forward zone
 Configure the forward zones (for all requests you cannot resolve locally)
+
 
 ```bash
 vim /etc/unbound/unbound.conf.d/03_forward.conf
@@ -82,6 +89,8 @@ forward-addr: 8.8.4.4
 forward-addr: 8.8.8.8
 ```
 
+
+### Local zone (local dns entries)
 and finally, you local DNS entries
 
 ```bash
@@ -103,6 +112,8 @@ local-data: "homeautomation.myself.com. A 192.168.1.6"
 local-data: "www.homeautomation.myself.com. A 192.168.1.2"
 ```
 
+
+### Start
 Now restart the server
 
 ```bash
@@ -112,6 +123,7 @@ unbound -d
 # or in the background
 unbound
 ```
+
 
 And test
 
