@@ -1,6 +1,6 @@
 ## WAT
 
-Running your own unbound on a debian box
+Running your own unbound on an alpine box
 
 Install unbound dns
 ```bash
@@ -107,6 +107,10 @@ Now restart the server
 
 ```bash
 servicectl restart unbound
+# or as foreground
+unbound -d 
+# or in the background
+unbound
 ```
 
 And test
