@@ -98,7 +98,7 @@ local-data: "www.homeautomation.myself.com. A 192.168.1.2"
 Now restart the server
 
 ```bash
-servicectl restart unbound
+systemctl restart unbound
 ```
 
 And test
